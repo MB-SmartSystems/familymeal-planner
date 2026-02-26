@@ -55,13 +55,13 @@ class GoogleSheetsService {
     console.log(`Mock GET: ${range}`)
     
     if (range.includes('Rezepte')) {
-      // Import der 100 Premium-Rezepte
-      const { PREMIUM_100_RECIPES } = await import('../data/premium-100-recipes')
+      // Import der DEMO-Rezepte mit Placeholder-Links
+      const { EXPANDED_DEMO_RECIPES, RECIPE_COUNT } = await import('../data/demo-recipes-with-placeholders')
       
       // Konvertiere Recipe-Objekte zu Tabellen-Format
       const headers = ['ID', 'Titel', 'URL', 'Quelle', 'Bewertung', 'Anzahl_Bewertungen', 'Kochzeit', 'Portionen', 'Schwierigkeit', 'Kategorie', 'Küche', 'Zutaten', 'Bild_URL', 'Beschreibung', 'Tags', 'Hinzugefügt', 'Zuletzt_verwendet', 'Familien_Bewertung']
       
-      const rows = PREMIUM_100_RECIPES.map(recipe => [
+      const rows = EXPANDED_DEMO_RECIPES.map(recipe => [
         recipe.id,
         recipe.title,
         recipe.url,

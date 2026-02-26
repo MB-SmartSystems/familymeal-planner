@@ -11,8 +11,8 @@ export interface Recipe {
   cookTime: number // Minuten
   servings: number
   difficulty: 'einfach' | 'mittel' | 'schwer'
-  category: 'hauptgang' | 'vorspeise' | 'nachspeise' | 'snack' | 'beilage' | 'frühstück' | 'getränk'
-  cuisine: 'deutsch' | 'italienisch' | 'französisch' | 'spanisch' | 'griechisch' | 'asiatisch' | 'amerikanisch' | 'vegetarisch' | 'mediterran' | 'orientalisch' | 'skandinavisch' | 'österreichisch' | 'international'
+  category: 'hauptgang' | 'vorspeise' | 'nachspeise' | 'dessert' | 'suppe' | 'salat' | 'snack' | 'beilage' | 'frühstück' | 'getränk'
+  cuisine: 'deutsch' | 'bayerisch' | 'schwäbisch' | 'rheinisch' | 'österreichisch' | 'schweizer' | 'italienisch' | 'französisch' | 'spanisch' | 'griechisch' | 'türkisch' | 'indisch' | 'chinesisch' | 'japanisch' | 'thailändisch' | 'mexikanisch' | 'amerikanisch' | 'russisch' | 'ungarisch' | 'polnisch' | 'tschechisch' | 'kroatisch' | 'asiatisch' | 'vegetarisch' | 'mediterran' | 'orientalisch' | 'skandinavisch' | 'fränkisch' | 'international'
   ingredients: string[]
   imageUrl?: string
   description?: string

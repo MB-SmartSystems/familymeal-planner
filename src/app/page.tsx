@@ -110,8 +110,8 @@ export default function Home() {
             
             <div className="flex items-center space-x-4">
               {/* Recipe Count Badge */}
-              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                100+ Rezepte
+              <div className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                📋 DEMO: Placeholder-Links
               </div>
               
               {/* Premium Badge */}
@@ -211,9 +211,9 @@ export default function Home() {
             
             <div>
               <div className="text-2xl mb-2">📚</div>
-              <h3 className="font-semibold text-gray-900">100+ Rezepte</h3>
+              <h3 className="font-semibold text-gray-900">📋 Demo-Modus</h3>
               <p className="text-sm text-gray-600 mt-1">
-                Handverlesene deutsche Familienrezepte mit echten Links
+                Deutsche Familienrezepte mit Placeholder-Links. Echte URLs können einfach eingefügt werden.
               </p>
             </div>
             
@@ -223,6 +223,25 @@ export default function Home() {
               <p className="text-sm text-gray-600 mt-1">
                 Werktags max. 45min, Wochenende mehr Zeit für aufwändige Gerichte
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Demo Mode Warning */}
+        <div className="mt-8 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+          <div className="flex items-start space-x-3">
+            <div className="text-orange-500 text-xl">⚠️</div>
+            <div>
+              <h3 className="font-semibold text-orange-900 mb-2">
+                Demo-Modus aktiv
+              </h3>
+              <p className="text-sm text-orange-800 mb-3">
+                Die Rezept-Links sind derzeit Placeholder. Die App-Funktionalität ist vollständig - 
+                nur die URLs müssen durch echte ChefKoch-Links ersetzt werden.
+              </p>
+              <div className="text-xs text-orange-700">
+                <strong>Für Production:</strong> Ersetze Placeholder-URLs in <code>demo-recipes-with-placeholders.ts</code>
+              </div>
             </div>
           </div>
         </div>
