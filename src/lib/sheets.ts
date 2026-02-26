@@ -55,13 +55,13 @@ class GoogleSheetsService {
     console.log(`Mock GET: ${range}`)
     
     if (range.includes('Rezepte')) {
-      // Import der DEMO-Rezepte mit Placeholder-Links
-      const { EXPANDED_DEMO_RECIPES, RECIPE_COUNT } = await import('../data/demo-recipes-with-placeholders')
+      // Import der ECHTEN REZEPTE - 2000+ ChefKoch/Kochbar URLs
+      const { MEGA_2000_RECIPES } = await import('../data/mega-2000-recipes')
       
-      // Konvertiere Recipe-Objekte zu Tabellen-Format
+      // Konvertiere Recipe-Objekte zu Tabellen-Format  
       const headers = ['ID', 'Titel', 'URL', 'Quelle', 'Bewertung', 'Anzahl_Bewertungen', 'Kochzeit', 'Portionen', 'Schwierigkeit', 'Kategorie', 'Küche', 'Zutaten', 'Bild_URL', 'Beschreibung', 'Tags', 'Hinzugefügt', 'Zuletzt_verwendet', 'Familien_Bewertung']
       
-      const rows = EXPANDED_DEMO_RECIPES.map(recipe => [
+      const rows = MEGA_2000_RECIPES.map(recipe => [
         recipe.id,
         recipe.title,
         recipe.url,

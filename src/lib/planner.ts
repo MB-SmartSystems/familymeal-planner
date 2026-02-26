@@ -8,7 +8,7 @@ import {
   FamilyProfile,
   PlannerConfig 
 } from './types'
-import { sheetsService, generateWeekPlanId } from './sheets'
+import { dataService, generateWeekPlanId } from './data-service'
 
 interface PlannerOptions {
   startDate: Date
@@ -74,7 +74,7 @@ class WeekPlannerEngine {
       }
 
       // 5. Plan speichern
-      await sheetsService.saveWeekPlan(weekPlan)
+      await dataService.saveWeekPlan(weekPlan)
       
       return weekPlan
 
@@ -91,8 +91,8 @@ class WeekPlannerEngine {
     const recipes: Recipe[] = []
     
     try {
-      // Bestehende Rezepte aus Google Sheets
-      const savedRecipes = await sheetsService.getAllRecipes()
+      // Bestehende Rezepte aus Database
+      const savedRecipes = await dataService.getAllRecipes()
       recipes.push(...savedRecipes)
       
     } catch (error) {
